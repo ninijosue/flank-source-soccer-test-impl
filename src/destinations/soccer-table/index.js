@@ -44,7 +44,7 @@ const TableBody = () => {
       <tr className="tableBodyRow">
         <td className="positionNumber">1</td>
         <td>
-          <Link className="teamName" to="/home" >Arsenal</Link>
+          <Link className="teamName" to="/fixture/team" >Arsenal</Link>
         </td>
         <td>4</td>
         <td>4</td>

@@ -1,0 +1,105 @@
+
+.fixtureContainer .mainHead {
+    background-color: var(--primary-color);
+    height: 250px;
+    display: grid;
+    align-items: center;
+    color: var(--main-white)
+}
+
+.fixtureContainer .mainHead .headText {
+    font-size: 80px;
+    text-transform: capitalize;
+    font-weight: bolder;
+    margin: 0;
+    margin: 0 var(--side-margin);
+}
+
+.fixtureContainer .fixtureNavigation{
+    margin: 0 var(--side-margin);
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+}
+
+.fixtureContainer .fixtureNavigation a{
+    color: var(--main-white);
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: .2s ease;
+}
+
+.fixtureContainer .fixtureNavigation a:hover{
+    transition: .2s ease;
+    color: var(--pure-green);
+    text-decoration: underline;
+}
+
+.fixtureContainer .fixtureNavigation span{
+    color: var(--pure-green);
+    font-weight: bold;
+}
+
+.fixtureContainer .fixtureRowContainer{
+    margin: 0 var(--side-margin);
+    margin-top: 120px;
+
+}
+
+.fixtureRowContainer .fixtureTitle{
+    font-weight: bold;
+    margin-bottom: 80px;
+}
+
+.fixtureContainer .fixtureDetails{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    border-bottom: 1px solid #efefef;
+    /* border-top: 1px solid #efefef; */
+}
+
+.fixtureContainer .fixtureDetails h3 {
+    margin: 15px 0;
+    
+}
+
+
+.fixtureDetails .winings{
+    background-color: var(--primary-color);
+    color: var(--main-white);
+    display: flex;
+    width: 40px;
+    justify-content:space-evenly;
+    padding: 3px 10px;
+    align-items: center;
+
+}
+
+.fixtureDetails .winingsWaitting{
+    border: 1px solid #efefef;
+    color: var(--main-dark);
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    padding: 3px 10px
+}
+
+.winingsWaitting span{
+    display: flex;
+    line-break: none;
+}
+
+.fixtureDetails .winings span{
+    font-weight: bold;
+    font-size: 14px;
+    
+}
+
+.fixtureDetails .winings .winingsDivider{
+    width: 1px;
+    height: 10px;
+    background-color: var(--main-white);
+    opacity: .5;
+}
