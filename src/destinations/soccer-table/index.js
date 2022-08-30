@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./style.css";
 
 const SoccerTable = () => {
@@ -41,8 +42,10 @@ const TableBody = () => {
   return (
     <tbody>
       <tr className="tableBodyRow">
-        <td>1</td>
-        <td>Arsenal</td>
+        <td className="positionNumber">1</td>
+        <td>
+          <Link className="teamName" to="/home" >Arsenal</Link>
+        </td>
         <td>4</td>
         <td>4</td>
         <td>0</td>
@@ -50,13 +53,36 @@ const TableBody = () => {
         <td>0</td>
         <td>
           <div className="playedRounds">
-            <span>w</span>
-            <span>w</span>
-            <span>w</span>
+            <div className="fixtureLabelRow">
+              <FixtureQualificationLabel />
+              <span className="qualification">w</span>
+            </div>
+            <div className="fixtureLabelRow">
+              <FixtureQualificationLabel />
+              <span className="qualification">w</span>
+            </div>
           </div>
         </td>
       </tr>
     </tbody>
+  )
+}
+
+const FixtureQualificationLabel = () => {
+  return (
+    <div className="fixtureContentLabel">
+      <span className="happenedAt">sunday 20 august 2020</span>
+      <div className="fixtureInfo">
+        <span className="teamPrevName">ARS</span>
+        <div className="winings">
+          <span>1</span>
+          <span className="winingsDivider" />
+          <span>2</span>
+        </div>
+        <span className="teamPrevName">LIV</span>
+      </div>
+      <div className="rectangularIndicator" />
+    </div>
   )
 }
 

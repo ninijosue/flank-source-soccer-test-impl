@@ -13,5 +13,7 @@ body {
   --weak-color: #fbfbfb;
   --pure-green: #13cf00;
   --lighten-gray: #6c6c6c;
-  --border-color: #cdcdcd
+  --border-color: #cdcdcd;
+  --moody-gray: #4e4d4e;
+  --main-dark: #000
 }
