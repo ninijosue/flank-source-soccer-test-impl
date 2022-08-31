@@ -1,13 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "./style.css";
 
-const TeamFixture = () => {
+const TeamFixture = (props) => {
+  const {team} = useParams();
   return (
     <div className="fixtureContainer">
       <div className="mainHead">
         <div>
-          <h1 className="headText">Team Fixture</h1>
+          <h1 className="headText">{team}'s Fixture</h1>
           <div className="fixtureNavigation">
             <Link to="/">Soccer table</Link>
             <span>Soccer table</span>
