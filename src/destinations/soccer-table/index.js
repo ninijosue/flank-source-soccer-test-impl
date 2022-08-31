@@ -4,9 +4,9 @@ import "./style.css";
 import { data } from "../../data";
 
 
-const getLeageStats = (setDataTable) => {
+export const getLeageStats = (teamsData) => {
   const teamWithScores = {};
-  for (const team of data) {
+  for (const team of teamsData) {
     const score = team.score;
     const teams = Object.keys(score);
     const firstTeam = teams[0];
@@ -65,8 +65,8 @@ const getLeageStats = (setDataTable) => {
     teamWithScores[firstTeam].fixtures.push(team);
     teamWithScores[secondTeam].fixtures.push(team);
   }
-  setDataTable(Object.values(teamWithScores)
-    .sort((a, b) => b.points - a.points))
+  return Object.values(teamWithScores)
+    .sort((a, b) => b.points - a.points);
 }
 
 const giveScoreStatus = (team, teamAgainst, score) => {
@@ -83,7 +83,8 @@ const SoccerTable = () => {
   const [dataTable, setDataTable] = React.useState([]);
 
   React.useEffect(() => {
-    getLeageStats(setDataTable);
+    const arrangedData = getLeageStats(data);
+    setDataTable(arrangedData);
   }, []);
 
   return (
