@@ -8,6 +8,7 @@ export const getLeageStats = (teamsData) => {
     const firstTeamScoreStuatus = giveScoreStatus(firstTeam, secondTeam, score);
     const secondTeamScoreStuatus = giveScoreStatus(secondTeam, firstTeam, score);
 
+    // team data calculation
     const dataManupilation = (status, currTeam) => {
       const currentTeamIndex = teams.indexOf(currTeam.name);
       const indexOfAgainstTeam = currentTeamIndex === 0 ? 1 : 0;
@@ -32,6 +33,7 @@ export const getLeageStats = (teamsData) => {
     if (teamWithScores[firstTeam])
       dataManupilation(firstTeamScoreStuatus, teamWithScores[firstTeam])
     else {
+      // first team data initialization
       teamWithScores[firstTeam] = {}
       teamWithScores[firstTeam].name = firstTeam;
       teamWithScores[firstTeam].won = 0;
@@ -48,7 +50,7 @@ export const getLeageStats = (teamsData) => {
     if (teamWithScores[secondTeam])
       dataManupilation(secondTeamScoreStuatus, teamWithScores[secondTeam])
     else {
-
+      // second team data initialization
       teamWithScores[secondTeam] = {};
       teamWithScores[secondTeam].name = secondTeam;
       teamWithScores[secondTeam].won = 0;
