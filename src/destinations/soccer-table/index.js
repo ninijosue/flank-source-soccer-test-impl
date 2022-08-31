@@ -85,7 +85,7 @@ const SoccerTable = () => {
   React.useEffect(() => {
     getLeageStats(setDataTable);
   }, []);
-  
+
   return (
     <div className="soccerTableContainer">
       <div className="mainHead">
@@ -95,12 +95,10 @@ const SoccerTable = () => {
         <table>
           <TableHead />
           <tbody>
-            {
-              dataTable.map((dt, index) =>
-                <TableBodyTr key={`row_${index}`} position={index + 1} rowData={dt} />)
-            }
+            {dataTable.map((dt, index) =>
+              <TableBodyTr key={`row_${index}`}
+                position={index + 1} rowData={dt} />)}
           </tbody>
-
         </table>
       </div>
     </div>
@@ -145,7 +143,6 @@ const TableBodyTr = (props) => {
           {
             teamData.fixtures.map((fx, fxIndex) => {
               let teamAgainst = "";
-              // const fxStatus = giveScoreStatus(teamData.name, )
               const allTeamNames = Object.keys(fx.score)
               const currTeamNameIndex = allTeamNames.indexOf(teamData.name);
               if (currTeamNameIndex === 0) teamAgainst = allTeamNames[1];
