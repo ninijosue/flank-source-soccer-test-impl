@@ -1,10 +1,13 @@
+.soccerTableContainer{
+    margin-bottom: 100px;
+}
 
 .soccerTableContainer .mainHead {
     background-color: var(--primary-color);
     height: 250px;
     display: grid;
     align-items: center;
-    color: var(--main-white)
+    color: var(--main-white);
 }
 
 .soccerTableContainer .mainHead .headText {
@@ -63,7 +66,7 @@
 .tableContainer table .tableBodyRow td {
     font-size: 14px;
     font-weight: 500;
-    padding: 15px 10px;
+    padding: 10px 10px;
     border-bottom: 1px solid #efefef;
     color: #000
 }
@@ -78,13 +81,13 @@
     font-size: 20px;
     border-radius: 50%;
     width: 34px;
-    height: 25px;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0;
     font-weight: bold;
-    padding-bottom: 8px;
+    padding-bottom: 4px;
     color: var(--main-white);
     cursor: help;
 
@@ -97,7 +100,7 @@
 
 .playedRounds .fixtureLabelRow .fixtureContentLabel {
     position: absolute;
-    width: 200px;
+    width: 250px;
     height: 70px;
     background-color: var(--main-white);
     right: 0px;
@@ -157,4 +160,12 @@
 
 .fixtureContentLabel .teamPrevName {
     font-weight: bold;
+}
+
+.gameLoss {
+    background-color: red !important;
+}
+
+.gameDrawn{ 
+    background-color: var(--moody-gray) !important;
 }
