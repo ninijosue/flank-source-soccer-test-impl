@@ -45,7 +45,7 @@ const TableHead = () => {
         <th>Won</th>
         <th>Drwan</th>
         <th>Lost</th>
-        <th>GF</th>
+        <th>Goal difference</th>
         <th>Points</th>
         <th>Form</th>
       </tr>
