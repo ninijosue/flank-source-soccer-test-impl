@@ -169,3 +169,7 @@
 .gameDrawn{ 
     background-color: var(--moody-gray) !important;
 }
+
+.teamPoints {
+    font-weight: bold !important;
+}

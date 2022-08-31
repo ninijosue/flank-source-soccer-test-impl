@@ -45,6 +45,7 @@ const TableHead = () => {
         <th>Won</th>
         <th>Drwan</th>
         <th>Lost</th>
+        <th>GF</th>
         <th>Points</th>
         <th>Form</th>
       </tr>
@@ -65,7 +66,8 @@ const TableBodyTr = (props) => {
       <td>{teamData.won}</td>
       <td>{teamData.draw}</td>
       <td>{teamData.loss}</td>
-      <td>{teamData.points}</td>
+      <td>{teamData.goalsDifference}</td>
+      <td className="teamPoints">{teamData.points}</td>
       <td>
         <div className="playedRounds">
           {

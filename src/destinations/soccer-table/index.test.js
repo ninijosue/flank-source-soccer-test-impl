@@ -9,7 +9,7 @@ describe("soccer table data testing", () => {
 
     it("test the function to get the each team data", () => {
          const mockedData = [data[0]];
-        const mockResult = getLeageStats(mockedData);
+        const mockedResult = getLeageStats(mockedData);
         const expectedResult = [
             {
                 name: "Leicester City",
@@ -17,6 +17,7 @@ describe("soccer table data testing", () => {
                 draw: 0,
                 loss: 0,
                 points: 3,
+                goalsDifference: 1,
                 playedGame: 1,
                 fixtures: mockedData
             },
@@ -26,12 +27,13 @@ describe("soccer table data testing", () => {
                 draw: 0,
                 loss: 1,
                 points: 0,
+                goalsDifference: -1,
                 playedGame: 1,
                 fixtures: mockedData
             }
 
         ];
-        expect(mockResult).toEqual(expectedResult);
+        expect(mockedResult).toEqual(expectedResult);
     });
 
     it("test if the team has lost the fixture", () => {
