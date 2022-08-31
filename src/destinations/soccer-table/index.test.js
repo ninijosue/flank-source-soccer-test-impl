@@ -8,15 +8,7 @@ describe("soccer table data testing", () => {
     });
 
     it("test the function to get the each team data", () => {
-        const mockedData = [
-            {
-                score: {
-                    "Manchester United": 1,
-                    "Leicester City": 2
-                },
-                date: "2021-05-04T14:00:00"
-            },
-        ];
+         const mockedData = [data[0]];
         const mockResult = getLeageStats(mockedData);
         const expectedResult = [
             {

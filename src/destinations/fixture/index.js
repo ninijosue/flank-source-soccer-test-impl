@@ -3,29 +3,16 @@ import { Link, useParams } from "react-router-dom";
 import "./style.css";
 import { data } from "../../data";
 import * as fnsDate from 'date-fns'
-
-const getTeamFixture = (teamName, setFixtures) => {
-  const TeamFixtures = {};
-
-  for (const fixture of data) {
-    const teams = Object.keys(fixture.score);
-    if (teams.includes(teamName)) {
-      if (TeamFixtures[fixture.date])
-        TeamFixtures[fixture.date].fixture.push(fixture);
-      else TeamFixtures[fixture.date] = {
-        fixture: [fixture],
-        date: fixture.date
-      }
-    }
-  }
-  setFixtures(Object.values(TeamFixtures)
-    .sort((a, b) => b.date.localeCompare(a.date)));
-}
+import {getTeamFixtures} from "./data-manupulation";
 
 const TeamFixture = (props) => {
   const { team } = useParams();
   const [fixtures, setFixtures] = React.useState([]);
-  React.useEffect(() => getTeamFixture(team, setFixtures), []);
+
+  React.useEffect(() => {
+    const res = getTeamFixtures(team, data);
+    setFixtures(res);
+  }, []);
 
   return (
     <div className="fixtureContainer">
