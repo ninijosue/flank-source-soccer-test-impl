@@ -2,6 +2,7 @@ import React from "react";
 import { Link, useParams } from "react-router-dom";
 import "./style.css";
 import { data } from "../../data";
+import * as fnsDate from 'date-fns'
 
 const getTeamFixture = (teamName, setFixtures) => {
   const TeamFixtures = {};
@@ -23,7 +24,7 @@ const getTeamFixture = (teamName, setFixtures) => {
 
 const TeamFixture = (props) => {
   const { team } = useParams();
-  const [fixtures, setFixtures] = React.useState([])
+  const [fixtures, setFixtures] = React.useState([]);
   React.useEffect(() => getTeamFixture(team, setFixtures), []);
 
   return (
@@ -41,7 +42,7 @@ const TeamFixture = (props) => {
         fixtures.map((fx, mainFxIndex) => {
           return (
             <div key={`main_Fx_${mainFxIndex}`} className="fixtureRowContainer">
-              <h2 className="fixtureTitle">{new Date(fx.date).toLocaleString()}</h2>
+              <h2 className="fixtureTitle">{(new Date(fx.date)).toDateString()}</h2>
               {
                 fx.fixture.map((subFx, i) => {
                   const teamNames = Object.keys(subFx.score);
@@ -63,7 +64,7 @@ const TeamFixture = (props) => {
                     <div key={`sub_non_Fx_${i}`} className="fixtureDetails">
                       <h3>{teamNames[0]}</h3>
                       <div className="winingsWaitting">
-                        <span>12 : 20</span>
+                        <span>{fnsDate.getHours(new Date(fx.date))} : {fnsDate.getMinutes(new Date(fx.date))}</span>
                       </div>
                       <h3>{teamNames[1]}</h3>
                     </div>
