@@ -1,4 +1,3 @@
-import {data} from "../../data";
 import {getTeamFixtures} from "./data-manupulation";
 
 describe("testing the team fixtures", ()=>{
