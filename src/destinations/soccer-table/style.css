@@ -1,2 +1,175 @@
-.soccer_table_container {
+.soccerTableContainer{
+    margin-bottom: 100px;
+}
+
+.soccerTableContainer .mainHead {
+    background-color: var(--primary-color);
+    height: 250px;
+    display: grid;
+    align-items: center;
+    color: var(--main-white);
+}
+
+.soccerTableContainer .mainHead .headText {
+    font-size: 80px;
+    text-transform: capitalize;
+    font-weight: bolder;
+    margin: 0;
+    margin: 0 var(--side-margin);
+}
+
+.soccerTableContainer .tableContainer {
+    padding: 0 var(--side-margin);
+    margin-top: 100px;
+
+}
+
+.soccerTableContainer .tableContainer table {
+    border-collapse: collapse;
+    text-align: left;
+    width: 100%;
+    font-family: "Zen Kurenaido", sans-serif;
+}
+
+.tableContainer table .tableHeadRow {
+    font-size: 12px;
+    background-color: var(--weak-color);
+}
+
+.tableBodyRow .positionNumber{
+    width: 30px;
+    text-align: center;
+    color: var(--main-dark) !important;
+}
+
+.tableContainer table .tableHeadRow th {
+    padding: 12px 10px;
+    color: var(--lighten-gray)
+}
+
+.tableContainer table .tableBodyRow .teamName{
+    min-width: 150px;
+    display: block;
+    font-size: 14px;
+    color: var(--main-dark);
+    text-decoration: none;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.tableContainer table .tableBodyRow .teamName:hover{
+    text-decoration: underline;
+    transition: .3s ease;
+    text-decoration-color: var(--main-dark);
+}
+
+.tableContainer table .tableBodyRow td {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 10px;
+    border-bottom: 1px solid #efefef;
+    color: #000
+}
+
+.tableContainer table .playedRounds {
+    display: flex;
+    gap: 8px;
+}
+
+.tableContainer table .playedRounds .qualification {
+    background-color: var(--pure-green);
+    font-size: 20px;
+    border-radius: 50%;
+    width: 34px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-weight: bold;
+    padding-bottom: 4px;
+    color: var(--main-white);
+    cursor: help;
+
+}
+
+.playedRounds .fixtureLabelRow {
+    position: relative;
+    transition: .3s ease
+}
+
+.playedRounds .fixtureLabelRow .fixtureContentLabel {
+    position: absolute;
+    width: 250px;
+    height: 70px;
+    background-color: var(--main-white);
+    right: 0px;
+    bottom: 35px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 25%);
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s ease
+}
+
+.fixtureContentLabel .rectangularIndicator {
+    width: 20px;
+    height: 20px;
+    background-color: var(--main-white);
+    position: absolute;
+    bottom: -5px;
+    right: 10px;
+    transform: rotate(45deg);
+
+}
+
+.playedRounds .fixtureLabelRow:hover .fixtureContentLabel {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transition: .3s ease
+}
+
+
+.fixtureContentLabel .happenedAt {
+    font-size: 12px;
+    text-align: center;
+    display: block;
+    margin: 8px 0;
+}
+
+.fixtureContentLabel .fixtureInfo{
+    display: flex;
+    justify-content:space-evenly
+}
+
+.fixtureContentLabel .winings{
+    background-color: var(--primary-color);
+    color: var(--main-white);
+    display: flex;
+    width: 40px;
+    justify-content:space-evenly;
+    padding-bottom: 3px;
+    align-items: center;
+}
+
+.fixtureContentLabel .winings .winingsDivider{
+    width: 1px;
+    height: 10px;
+    background-color: var(--main-white);
+    opacity: .5;
+}
+
+.fixtureContentLabel .teamPrevName {
+    font-weight: bold;
+}
+
+.gameLoss {
+    background-color: red !important;
+}
+
+.gameDrawn{ 
+    background-color: var(--moody-gray) !important;
+}
+
+.teamPoints {
+    font-weight: bold !important;
 }

@@ -9,7 +9,7 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<SoccerTable />} />
-          <Route path="/fixture/:team" element={<TeamFixture />} />
+          <Route path="/fixture/:team" element={<TeamFixture  />} />
         </Routes>
       </BrowserRouter>
     </div>

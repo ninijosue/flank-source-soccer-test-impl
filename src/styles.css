@@ -1,3 +1,19 @@
 .App {
   font-family: "Zen Kurenaido", sans-serif;
 }
+
+body {
+  margin: 0
+}
+
+:root {
+  --primary-color: #39013d;
+  --main-white: #fff;
+  --side-margin: 100px;
+  --weak-color: #fbfbfb;
+  --pure-green: #13cf00;
+  --lighten-gray: #6c6c6c;
+  --border-color: #cdcdcd;
+  --moody-gray: #4e4d4e;
+  --main-dark: #000
+}
